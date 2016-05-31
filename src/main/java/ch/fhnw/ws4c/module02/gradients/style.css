@@ -1,0 +1,20 @@
+GradientPane {
+    -fx-background-color: azure;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+.playground {
+    -fx-pref-height: 250;
+    -fx-pref-width: 250;
+    -fx-background-color: beige;
+}
+
+.linearGradientPlayground {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, red,  blue);
+}
+
+.radialGradientPlayground {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 70%, rgb(255, 0, 0) 0%, rgb(0, 255, 0) 50%, rgb(0,0,255) 100%);
+}
+

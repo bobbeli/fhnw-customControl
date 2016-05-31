@@ -1,0 +1,23 @@
+PathPane {
+    -fx-background-color: azure;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+.playground {
+    -fx-pref-height: 740;
+    -fx-pref-width: 596;
+    -fx-background-color: none;
+}
+.path2Playground{
+
+
+}
+.pathPlayground {
+    -fx-pref-width: 720;
+    -fx-pref-height: 576;
+
+    -fx-background-color: linear-gradient(from 360.9995 108.2725 to 360.9995 584.0042, #B1B0C1 0%, #B0B0C1 13%, #AEAFBE 19%, #A7AEB4 29%, #9AABA2 41%, #93A998 46%, #575454 100%);
+    -fx-scale-shape: true;
+    -fx-shape: cir;
+}
