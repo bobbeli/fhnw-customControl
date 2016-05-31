@@ -11,9 +11,9 @@ import javafx.scene.layout.HBox;
 /**
  * Created by dimitri on 21.05.2016.
  */
-public class HeaderUI extends BorderPane {
+public class HeaderUI extends VBox {
     private Region trainRail;
-
+    private Integer prefWidth = 500;
 
     private PresentationModel model;
 
@@ -27,6 +27,7 @@ public class HeaderUI extends BorderPane {
     private void initializeControls() {
         // Train Rail Number
         trainRail = new Region();
+        // Adds all CSS Classes to the Region
         trainRail.getStyleClass().addAll("detailUI","trainRail");
         trainRail.setMinWidth(88);
         trainRail.setMinHeight(86);
@@ -43,18 +44,20 @@ public class HeaderUI extends BorderPane {
 
     private void layoutControls() {
 
-        this.setPrefWidth(300);
-        this.setMinWidth(200);
-        this.setMaxWidth(800);
+        this.setPrefWidth(prefWidth);
+        this.setMinWidth(prefWidth);
+        this.setMaxWidth(prefWidth+10);
 
         this.backgroundProperty().setValue(new Background(new BackgroundFill(Paint.valueOf("White"), null, null)));
 
-
-        this.setTop(trainRail);
-
-
+        this.setPadding(new Insets(10,10,10,10));
+        this.setSpacing(18);
 
 
+        // positions of the Train Rail Icon
+        this.setMargin(trainRail, new Insets(10,10,0,0));
+
+       this.getChildren().addAll(trainRail);
 
     }
 }
