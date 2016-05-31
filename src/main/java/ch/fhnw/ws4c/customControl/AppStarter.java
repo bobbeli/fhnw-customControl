@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 
 /**
- * Created by dimitri on 19.04.2016.
+ * Created by dimitri on 19.04.2016.jhehej
  */
 public class AppStarter extends Application{
 
