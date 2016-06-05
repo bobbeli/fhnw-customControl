@@ -24,7 +24,11 @@ public class PresentationModel {
 
     // all getters and setters
     public void addItem(){
-        allItems.add(new Station("Olten", new Date()));
+        allItems.add(new Station("Olten", new Date(), true, false));
+        allItems.add(new Station("Bern", new Date(), false, false));
+        allItems.add(new Station("Thun", new Date(), false, false));
+        allItems.add(new Station("Spiez", new Date(), false, true));
+
     }
     public ObservableList<Station> getAllItems(){
         return allItems;

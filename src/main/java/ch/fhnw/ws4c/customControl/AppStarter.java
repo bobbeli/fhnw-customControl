@@ -18,8 +18,9 @@ public class AppStarter extends Application{
 
         Scene scene = new Scene(rootPanel);
 
+        String fonts = getClass().getResource("fonts.css").toExternalForm();
         String stylesheet = getClass().getResource("styles.css").toExternalForm();
-        scene.getStylesheets().add(stylesheet);
+        scene.getStylesheets().addAll(stylesheet, fonts);
 
         primaryStage.setTitle("SBB Custom Control");
         primaryStage.setScene(scene);

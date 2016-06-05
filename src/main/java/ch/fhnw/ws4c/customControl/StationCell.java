@@ -22,7 +22,7 @@ public class StationCell extends ListCell<Station>{
         setText(null);
         setGraphic(null);
         if(item != null && !empty){
-            setGraphic(new CellUI(item.getName(), item.getArriveTime()));
+            setGraphic(new CellUI(item.getName(), item.getArriveTime(), item.isFirst(), item.isLast()));
         }
 
 

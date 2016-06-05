@@ -59,8 +59,6 @@
 }
 
 .trainIcon {
-
-
     -fx-background-color: #000000;
     -fx-scale-shape: true;
     -fx-padding: 10;
@@ -104,4 +102,32 @@
 .trainSp {
     -fx-stroke: black;
     -fx-underline: false;
+     -fx-font-family: 'Roboto Thin';
+     -fx-font-size: 16;
+        -fx-text-fill: red;
+}
+
+.settings-button{
+    -fx-font-size: 16px;
+    -fx-font-family: 'Roboto Bold';
+    -fx-background-color: #ebebeb;
+    -fx-text-fill: #677381;
+
+}
+
+.settings-button:hover{
+    -fx-text-fill: #335bab;
+
+}
+
+.cell-style{
+    -fx-font-size: 13px;
+    -fx-font-family: 'Roboto Light';
+    -fx-text-fill: #ebebeb;
+}
+
+.cell-style-bold{
+    -fx-font-size: 13px;
+    -fx-font-family: 'Roboto Bold';
+    -fx-text-fill: #000000;
 }

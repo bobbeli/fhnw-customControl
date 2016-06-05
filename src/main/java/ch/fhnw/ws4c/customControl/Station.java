@@ -10,11 +10,15 @@ import java.text.*;
 public class Station {
     private String name;
     private Date arriveTime;
+    private boolean last = false;
+    private boolean first = false;
     DateFormat df = new SimpleDateFormat("HH:MM");
 
-    public Station(String _name, Date _arriveTime){
+    public Station(String _name, Date _arriveTime, boolean _first, boolean _last){
         name = _name;
         arriveTime = _arriveTime;
+        first = _first;
+        last = _last;
     }
 
     public String getName() {
@@ -27,7 +31,14 @@ public class Station {
 
     public String getArriveTime() {
         return df.format(arriveTime);
+    }
 
+    public boolean isLast(){
+        return last;
+    }
+
+    public boolean isFirst(){
+        return first;
     }
 
     public void setArriveTime(Date arriveTime) {
