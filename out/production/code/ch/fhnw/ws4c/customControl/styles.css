@@ -19,7 +19,7 @@
                 	H277.908z";
 }
 
-.trainRail{
+.trainRailShield{
     -fx-background-color: #000000;
     -fx-scale-shape: true;
     -fx-shape: "M261.778,477.647c-17.486,0.001-34.972,0.022-52.458-0.009
@@ -56,6 +56,46 @@
                 	h43.094v6.357c-4.239,4.512-8.439,10.506-12.602,17.982c-4.163,7.479-7.379,15.168-9.649,23.068
                 	c-1.635,5.571-2.679,11.671-3.133,18.301h-8.401c0.091-5.237,1.12-11.564,3.088-18.981c1.968-7.417,4.791-14.569,8.469-21.456
                 	c3.679-6.887,7.591-12.692,11.739-17.415H241.905z";
+}
+
+.trainRailArea {
+	-fx-fill: #1c3e94;
+}
+
+.trainRailFrame {
+	-fx-fill: #1c3e94;
+	-fx-stroke: white;
+	-fx-stroke-width: 1.5;
+}
+
+.rail {
+	-fx-font-family: 'Helvetica';
+	-fx-font-size: 12;
+	-fx-fill: white;
+}
+
+.trainRailValue {
+	-fx-font-family: 'Helvetica';
+	-fx-font-size: 64;
+	-fx-font-weight: 700;
+	-fx-fill: white;
+	-fx-text-alignment: center;
+}
+
+.toDestination {
+	-fx-font-family: 'Helvetica';
+	-fx-font-size: 16;
+	-fx-fill: black;
+}
+
+.destination {
+	-fx-font-family: 'Helvetica';
+	-fx-font-size: 42;
+	-fx-fill: rgb(85, 85, 85);
+}
+
+.placeholder {
+	-fx-fill: lightgray;
 }
 
 .trainIcon {
