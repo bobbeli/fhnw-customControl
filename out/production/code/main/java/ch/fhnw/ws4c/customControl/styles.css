@@ -75,7 +75,7 @@
 }
 
 .trainRailValue {
-	-fx-font-family: 'Helvetica';
+	-fx-font-family: 'Roboto Normal';
 	-fx-font-size: 64;
 	-fx-font-weight: 700;
 	-fx-fill: white;
@@ -83,15 +83,16 @@
 }
 
 .toDestination {
-	-fx-font-family: 'Helvetica';
+	-fx-font-family: 'Roboto Light';
 	-fx-font-size: 16;
 	-fx-fill: black;
 }
 
 .destination {
-	-fx-font-family: 'Helvetica';
-	-fx-font-size: 42;
+	-fx-font-family: 'Roboto Light';
+	-fx-font-size: 25;
 	-fx-fill: rgb(85, 85, 85);
+		-fx-fill: black;
 }
 
 .placeholder {

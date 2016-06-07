@@ -1,5 +1,6 @@
 package ch.fhnw.ws4c.customControl;
 
+import javafx.geometry.Insets;
 import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -17,7 +18,6 @@ import javafx.scene.text.TextAlignment;
  */
 public class DirectionUI extends Region {
 
-    private static final String STYLE_CSS = "styles.css";
     private static final double PREFERRED_WIDTH  = 100;
     private static final double PREFERRED_HEIGHT = 100;
 
@@ -43,6 +43,7 @@ public class DirectionUI extends Region {
     }
 
     private void initializeParts() {
+
         toDestination = new Text("nach");
         toDestination.getStyleClass().add("toDestination");
         toDestination.setTextOrigin(VPos.CENTER);
@@ -50,7 +51,7 @@ public class DirectionUI extends Region {
         toDestination.setY(15);
         toDestination.setMouseTransparent(true);
 
-        destination = new Text("Zürich");
+        destination = new Text("Bern");
         destination.getStyleClass().add("destination");
         destination.setTextOrigin(VPos.CENTER);
         destination.setTextAlignment(TextAlignment.CENTER);
@@ -84,8 +85,6 @@ public class DirectionUI extends Region {
     }
 
     private void addStyleSheets(Parent parent) {
-        String stylesheet = getClass().getResource(STYLE_CSS).toExternalForm();
-        parent.getStylesheets().add(stylesheet);
     }
 
     private String getStyleClassName() {

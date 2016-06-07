@@ -71,7 +71,7 @@ public class TrainRail extends Region {
         trainRailValue.getStyleClass().add("trainRailValue");
         trainRailValue.setTextOrigin(VPos.CENTER);
         trainRailValue.setTextAlignment(TextAlignment.CENTER);
-        trainRailValue.setY(64);
+        trainRailValue.setY(55);
 
 
         // always needed
