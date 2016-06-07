@@ -43,7 +43,7 @@ public class ListUI extends VBox {
         this.setMaxWidth(180);
         this.prefWidth(160);
         this.setMinWidth(100);
-        this.setPadding(new Insets(20,0,0,20));
+        this.setPadding(new Insets(20,0,0,10));
         setVgrow(listView, Priority.ALWAYS);
         getChildren().addAll(listView);
     }

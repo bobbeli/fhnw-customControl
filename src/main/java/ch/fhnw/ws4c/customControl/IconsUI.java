@@ -46,7 +46,7 @@ public class IconsUI extends HBox{
 
         // Train Specification
         trainSp = new Text();
-        trainSp.setText("S1516");
+        trainSp.setText(model.getTrainNumber());
         //trainSp.setText( Integer.toString(model.getTrainNumber()));
         trainSp.getStyleClass().add("trainSp");
         trainSp.setTextAlignment(TextAlignment.JUSTIFY);

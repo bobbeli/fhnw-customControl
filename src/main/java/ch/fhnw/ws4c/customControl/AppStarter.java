@@ -16,6 +16,7 @@ public class AppStarter extends Application{
     public void start(Stage primaryStage) throws Exception {
         Parent rootPanel = new BorderPaneUI();
 
+        new ClockSBBUI();
         Scene scene = new Scene(rootPanel);
 
         String fonts = getClass().getResource("fonts.css").toExternalForm();

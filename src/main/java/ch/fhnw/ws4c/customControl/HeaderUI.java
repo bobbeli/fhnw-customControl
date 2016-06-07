@@ -1,10 +1,10 @@
 package ch.fhnw.ws4c.customControl;
 
-import javafx.beans.property.IntegerProperty;
+import eu.hansolo.medusa.Clock;
+import eu.hansolo.medusa.ClockBuilder;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
-import javafx.scene.layout.HBox;
 
 /**
  * Created by dimitri on 21.05.2016.
@@ -15,9 +15,9 @@ public class HeaderUI extends BorderPane {
     private Integer minWidth = 434;
 
     private PresentationModel model;
-    private ClockUI clock;
     private DirectionUI directionUI;
     private TrainRail railShield;
+    private Clock clock;
 
     public HeaderUI(PresentationModel _model){
         model = _model;
@@ -26,9 +26,14 @@ public class HeaderUI extends BorderPane {
     }
 
     private void initializeControls() {
-        clock = new ClockUI();
-        railShield = new TrainRail();
-        directionUI = new DirectionUI();
+        railShield = new TrainRail(model);
+        directionUI = new DirectionUI(model);
+
+        clock = ClockBuilder.create()
+                .prefSize(100, 100)
+                .skinType(Clock.ClockSkinType.DB)
+                .running(true)
+                .build();
     }
 
     private void layoutControls() {
@@ -41,10 +46,9 @@ public class HeaderUI extends BorderPane {
         this.setPadding(new Insets(10,10,10,10));
         this.setMargin(directionUI, new Insets(0,0,0,10));
 
-
-        this.setLeft(clock);
+        this.setLeft(railShield);
         this.setCenter(directionUI);
-        this.setRight(railShield);
+        this.setRight(clock);
 
         //this.getChildren().addAll(clock, directionUI, railShield);
     }

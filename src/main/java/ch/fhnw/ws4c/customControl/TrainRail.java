@@ -25,6 +25,8 @@ public class TrainRail extends Region {
     private static final double PREFERRED_WIDTH  = 100;
     private static final double PREFERRED_HEIGHT = 100;
 
+    private PresentationModel model;
+
     // all parts
     private Rectangle area;
     private Rectangle frame;
@@ -33,7 +35,9 @@ public class TrainRail extends Region {
 
     private Pane drawingPane;
 
-    public TrainRail() {
+    public TrainRail(PresentationModel model) {
+        this.model = model;
+        model.addItem();
         init();
         initializeParts();
         layoutParts();
@@ -67,7 +71,7 @@ public class TrainRail extends Region {
         rail.setTextAlignment(TextAlignment.CENTER);
         rail.setY(24);
 
-        trainRailValue = new Text("12");
+        trainRailValue = new Text(Integer.toString(model.getRailNumber()));
         trainRailValue.getStyleClass().add("trainRailValue");
         trainRailValue.setTextOrigin(VPos.CENTER);
         trainRailValue.setTextAlignment(TextAlignment.CENTER);

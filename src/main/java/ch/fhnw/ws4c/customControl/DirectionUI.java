@@ -25,16 +25,19 @@ public class DirectionUI extends Region {
     // all parts
     private Text toDestination;
     private Text destination;
+    private PresentationModel model;
 
     private Pane drawingPane;
 
-    public DirectionUI() {
+    public DirectionUI(PresentationModel model) {
+        this.model = model;
         init();
         initializeParts();
         layoutParts();
         // addEventHandlers();
         // addValueChangedListeners();
         addBindings();
+
     }
 
     private void init() {
@@ -48,14 +51,14 @@ public class DirectionUI extends Region {
         toDestination.getStyleClass().add("toDestination");
         toDestination.setTextOrigin(VPos.CENTER);
         toDestination.setTextAlignment(TextAlignment.CENTER);
-        toDestination.setY(15);
+        toDestination.setY(50);
         toDestination.setMouseTransparent(true);
 
-        destination = new Text("Bern");
+        destination = new Text(model.getLastStation());
         destination.getStyleClass().add("destination");
         destination.setTextOrigin(VPos.CENTER);
         destination.setTextAlignment(TextAlignment.CENTER);
-        destination.setY(50);
+        destination.setY(72);
         destination.setMouseTransparent(true);
 
         // always needed

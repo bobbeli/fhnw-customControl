@@ -18,9 +18,10 @@ import java.util.Date;
 public class PresentationModel {
     private final StringProperty windowTitle = new SimpleStringProperty("SBB Träffpunkt");
     private final IntegerProperty railNumber = new SimpleIntegerProperty(0);
-    private final IntegerProperty trainNumber = new SimpleIntegerProperty(0);
+    private final StringProperty trainNumber = new SimpleStringProperty("S20027");
 
     private final ObservableList<Station> allItems = FXCollections.observableArrayList();
+
 
     // all getters and setters
     public void addItem(){
@@ -28,6 +29,7 @@ public class PresentationModel {
         allItems.add(new Station("Bern", new Date(), false, false));
         allItems.add(new Station("Thun", new Date(), false, false));
         allItems.add(new Station("Spiez", new Date(), false, true));
+        railNumber.set(12);
 
     }
     public ObservableList<Station> getAllItems(){
@@ -50,8 +52,14 @@ public class PresentationModel {
     public IntegerProperty railProberty(){return  railNumber;}
 
     // Train Number Property
-    public int getTrainNumber(){return  trainNumber.get();}
-    public IntegerProperty trainProperty(){return trainNumber;}
+    public String getTrainNumber(){return  trainNumber.get();}
+    public StringProperty trainProperty(){return trainNumber;}
+
+    //
+    public String getLastStation(){
+        int lenght = allItems.size()-1;
+        return allItems.get(lenght).getName();
+    }
 
 
 }

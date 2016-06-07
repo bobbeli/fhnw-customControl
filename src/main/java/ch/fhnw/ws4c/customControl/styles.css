@@ -76,15 +76,15 @@
 
 .trainRailValue {
 	-fx-font-family: 'Roboto Normal';
-	-fx-font-size: 64;
+	-fx-font-size: 62;
 	-fx-font-weight: 700;
 	-fx-fill: white;
 	-fx-text-alignment: center;
 }
 
 .toDestination {
-	-fx-font-family: 'Roboto Light';
-	-fx-font-size: 16;
+	-fx-font-family: 'Roboto Normal';
+	-fx-font-size: 14;
 	-fx-fill: black;
 }
 
